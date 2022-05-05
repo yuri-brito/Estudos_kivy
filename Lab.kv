@@ -1,0 +1,68 @@
+ScrollViewEx:
+
+<ScrollViewEx@ScrollView>:
+    StackLayoutEx:
+        size_hint: 1,None
+        height: self.minimum_height
+
+
+
+<StackLayoutEx>:
+    # right-left bottom-top
+    #orientation: "rl-bt"
+
+    #padding: ('20dp','10dp','30dp','20dp')
+    #spacing:'20dp','30dp'
+    Button
+        text:'Aline'
+        size_hint: .2,.2
+    Button
+        text:'Yuri'
+        size_hint: .2,.2
+    Button
+        text:'Miguel'
+        size_hint: .2,.2
+
+<GridLayoutEx@GridLayout>:
+    #rows
+    #cols
+    cols:2
+    Button
+        text:'Aline'
+    Button
+        text:'Yuri'
+    Button
+        text:'Miguel'
+    MyLayout
+
+
+<MyLayout>:
+    Button:
+        text: 'Yuri'
+        #size: '100dp','60dp'
+        width: '100dp'
+        height: '60dp'
+        size_hint: None,None
+        # x, center_x, right
+        # y, center_y, top
+        pos_hint: {'center_y': 0.5 }
+    AnchorLayout:
+        spacing: '20dp'
+        anchor_x:'right'
+        anchor_y:'bottom'
+        BoxLayout:
+            Button:
+                text: 'B1'
+                size_hint: .2,.2
+            Button:
+                text: 'B2'
+                size_hint: .1,.1
+
+        #Button:
+        #    text: 'B3'
+        #Button:
+        #    text: 'B4'
+    Label:
+        text: 'Miguel'
+
+
